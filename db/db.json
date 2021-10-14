@@ -1,6 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+[{"title":"Test Title","text":"Test text","note_id":"id"},{"title":"Dog Mom","text":"Feed Blinky Lunch","note_id":"bev7"},{"title":"Dog Dad","text":"Walk Blinky","note_id":"f2a1069b-85cf-4ce3-ac75-93d10a40b8cb"},{"title":"Homework 11","text":"Homework 11 due Friday Night - JS page not working properly","note_id":"4e872464-950e-4566-9f37-bf888625ec32"}]

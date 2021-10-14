@@ -12,15 +12,15 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-// Show an element
-const show = (elem) => {
-  elem.style.display = 'inline';
-};
+// // Show an element
+// const show = (elem) => {
+//   elem.style.display = 'inline';
+// };
 
 // Hide an element
-const hide = (elem) => {
-  elem.style.display = 'none';
-};
+// const hide = (elem) => {
+//   elem.style.display = 'none';
+// };
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
@@ -51,9 +51,9 @@ const deleteNote = (id) =>
   });
 
 const renderActiveNote = () => {
-  hide(saveNoteBtn);
+  // hide(saveNoteBtn);
 
-  if (activeNote.id) {
+  if (activeNote.note_id) {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
@@ -108,13 +108,13 @@ const handleNewNoteView = (e) => {
   renderActiveNote();
 };
 
-const handleRenderSaveBtn = () => {
-  if (!noteTitle.value.trim() || !noteText.value.trim()) {
-    hide(saveNoteBtn);
-  } else {
-    show(saveNoteBtn);
-  }
-};
+// const handleRenderSaveBtn = () => {
+//   if (!noteTitle.value.trim() || !noteText.value.trim()) {
+//     hide(saveNoteBtn);
+//   } else {
+//     show(saveNoteBtn);
+//   }
+// };
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
@@ -176,8 +176,8 @@ const getAndRenderNotes = () => getNotes().then(renderNoteList);
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
-  noteTitle.addEventListener('keyup', handleRenderSaveBtn);
-  noteText.addEventListener('keyup', handleRenderSaveBtn);
+  // noteTitle.addEventListener('keyup', handleRenderSaveBtn);
+  // noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
 
 getAndRenderNotes();

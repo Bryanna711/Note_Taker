@@ -1,3 +1,5 @@
+//Helper functions created to be used notesRouter and any other route that may be needed later
+
 const fs = require('fs');
 const util = require('util');
 
